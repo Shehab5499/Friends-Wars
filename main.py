@@ -1,5 +1,5 @@
 import streamlit as st
-
+st.write('# Friends Wars Program')
 def female_no_intervere(check, upset):
     if check in ['y','yes']:
         st.write('Valid input')
