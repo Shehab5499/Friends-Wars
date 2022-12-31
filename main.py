@@ -20,28 +20,30 @@ upset = st.selectbox(
 # try:
 if upset:
     st.write(f'# I see {upset} has upset you!😞')
-if upset == 'Omar':
-    check = st.text_input('Did you know that Omar is enduring very hard conditions right now 😶? y/n \n').lower()
-    female_no_intervere(check,upset)
-elif upset == "Marwan":
-    check = st.text_input(f'Do you accept that {upset.title()} might be irrational sometimes? 🙁 y/n \n').lower()
-    female_no_intervere(check,upset)
+    if upset == 'Omar':
+        check = st.text_input('Did you know that Omar is enduring very hard conditions right now 😶? y/n \n').lower()
+        if check:
+            female_no_intervere(check,upset)
+    elif upset == "Marwan":
+        check = st.text_input(f'Do you accept that {upset.title()} might be irrational sometimes? 🙁 y/n \n').lower()
+        if check:
+            female_no_intervere(check,upset)
 
-elif upset == "Shehab":
-    inquire = st.text_input(f"What did he do/say to you that made you upset?\n")
-    if inquire:
-        st.write('## Oh 😳, how could he do this!😞')
-    check = st.text_input(f"Do you want me (the program) to tell {upset.title()} about that? y/n \n").lower()
-    if check in ['y','yes']:
-        st.write('Valid input')
-        st.write('# Ok, I will send him an email 📧 about that.')
-    elif check in ['n','no']:
-        st.write('Valid input')
-        st.write('# Ok, I will not tell him 🤐')
-    else:
-        st.write('Invalid input')
+    elif upset == "Shehab":
+        inquire = st.text_input(f"What did he do/say to you that made you upset?\n")
+        if inquire:
+            st.write('## Oh 😳, how could he do this!😞')
+        check = st.text_input(f"Do you want me (the program) to tell {upset.title()} about that? y/n \n").lower()
+        if check in ['y','yes']:
+            st.write('Valid input')
+            st.write('# Ok, I will send him an email 📧 about that.')
+        elif check in ['n','no']:
+            st.write('Valid input')
+            st.write('# Ok, I will not tell him 🤐')
+        else:
+            st.write('Invalid input')
 else:
-        st.write('Invalid input')
+        st.write('Answer the question')
     # if check == 'y':
 if check in ['y','yes']:
     import smtplib
