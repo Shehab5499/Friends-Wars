@@ -15,10 +15,11 @@ def female_no_intervere(check, upset):
         st.write('Invalid input')
     return sex
 
-upset = st.text_input('Who upset you? Omar / Shehab / Marwan').title()
+upset = st.selectbox('Who upset you? Omar / Shehab / Marwan',
+'Omar','Shehab','Marwan').title()
 try:
     if upset:
-        st.write(f'# I see {upset} have upset you!😞')
+        st.write(f'# I see {upset} has upset you!😞')
     if upset == 'Omar':
         check = st.text_input('Did you know that Omar is enduring very hard conditions right now 😶? y/n \n').lower()
         female_no_intervere(check,upset)
