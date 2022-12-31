@@ -36,7 +36,7 @@ try:
             st.write('# Ok, I will send him an email 📧 about that.')
         elif check in ['n','no']:
             st.write('Valid input')
-            st.write('# Ok, I will no tell him 🤐')
+            st.write('# Ok, I will not tell him 🤐')
         else:
             st.write('Invalid input')
     else:
