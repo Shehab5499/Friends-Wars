@@ -45,7 +45,7 @@ if upset:
 else:
         st.write('Answer the question')
     # if check == 'y':
-if check in ['y','yes']:
+if check in ['y','yes'] and upset == "Shehab":
     import smtplib
 
     # import os
