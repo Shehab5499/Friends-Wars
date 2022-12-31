@@ -40,6 +40,28 @@ if upset:
         if check in ['y','yes']:
             st.write('Valid input')
             st.write('# Ok, I will send him an email 📧 about that.')
+            import smtplib
+
+            # import os
+            # EMAIL_ADDRESS = os.environ.get('EMAIL_USER')
+            # EMAIL_PASSWORD = os.environ.get('EMAIL_PASS')
+            # inquire= 'Hello from emailing'
+            with smtplib.SMTP('smtp.gmail.com',587) as smtp:
+                smtp.ehlo()
+                smtp.starttls()
+                smtp.ehlo()
+
+                sender='shehabvodafone04@gmail.com'
+                smtp.login(sender,'ngudtbhvlrckmhpi')
+
+                subject = 'Friends Wars Program'
+                body = inquire
+                msg = f'Subject:{subject}\n\n{body}'
+
+                reciever = 'shoby1998eg@gmail.com'
+                # smtp.sendmail(SENDER,RECIVER,msg)
+                smtp.sendmail(sender, reciever, msg)
+
         elif check in ['n','no']:
             st.write('Valid input')
             st.write('# Ok, I will not tell him 🤐')
@@ -47,30 +69,3 @@ if upset:
             st.write('Invalid input')
 else:
         st.write('Answer the question')
-    # if check == 'y':
-if check is True and upset is True:
-    if check in ['y','yes'] and upset == "shehab":
-        import smtplib
-
-        # import os
-        # EMAIL_ADDRESS = os.environ.get('EMAIL_USER')
-        # EMAIL_PASSWORD = os.environ.get('EMAIL_PASS')
-        # inquire= 'Hello from emailing'
-        with smtplib.SMTP('smtp.gmail.com',587) as smtp:
-            smtp.ehlo()
-            smtp.starttls()
-            smtp.ehlo()
-
-            sender='shehabvodafone04@gmail.com'
-            smtp.login(sender,'ngudtbhvlrckmhpi')
-
-            subject = 'Friends Wars Program'
-            body = inquire
-            msg = f'Subject:{subject}\n\n{body}'
-
-            reciever = 'shoby1998eg@gmail.com'
-            # smtp.sendmail(SENDER,RECIVER,msg)
-            smtp.sendmail(sender, reciever, msg)
-    # except:
-    #     st.write(Exception())
-    #     st.write('Answer the questions')
