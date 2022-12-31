@@ -66,4 +66,5 @@ try:
             # smtp.sendmail(SENDER,RECIVER,msg)
             smtp.sendmail(sender, reciever, msg)
 except:
+    st.write(Exception())
     st.write('Answer the questions')
