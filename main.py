@@ -16,7 +16,7 @@ def female_no_intervere(check, upset):
     return sex
 upset = st.selectbox(
     'Who upset you?',
-    ('Omar', 'Marwan', 'Shehab'))
+    ('','Omar', 'Marwan', 'Shehab'))
 try:
     if upset:
         st.write(f'# I see {upset} has upset you!😞')
